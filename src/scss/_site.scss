@@ -1,0 +1,38 @@
+body {
+    background: url(../../img/bg.jpg);
+}
+
+.__dd {
+    overflow: hidden;
+    &__bg1 {
+        background-image: url(../../img/bg1.png);
+        background-size: cover;
+        background-color: #fff;
+    }
+    &__container {
+        max-width: 1660px;
+        width: 100%;
+        padding: 0 30px;
+        margin: 0 auto;
+    }
+    &__block {
+        &-on {
+            padding-top: 65px;
+            padding-bottom: 80px;
+            &__inner {
+                display: flex;
+            }
+        }
+        &-tw {
+            &__list {
+                display: flex;
+                margin: 0 -30px;
+                &__block {
+                    max-width: 50%;
+                    width: 100%;
+                    padding: 0 30px;
+                }
+            }
+        }
+    }
+}
