@@ -1,13 +1,12 @@
-body {
-    background: url(../../img/bg.jpg);
-}
-
 .__dd {
     overflow: hidden;
+    background: url(../../img/bg.jpg);
+    background-size: 1%;
     &__bg1 {
         background-image: url(../../img/bg1.png);
         background-size: cover;
         background-color: #fff;
+        padding-bottom: 50px;
     }
     &__container {
         max-width: 1660px;
@@ -15,12 +14,31 @@ body {
         padding: 0 30px;
         margin: 0 auto;
     }
+    &__slide {
+        padding-top: 50px;
+    }
+    &__heading {
+        color: #a23033;
+        text-align: center;
+        margin-bottom: 70px;
+        &__text {
+            font-size: 60px;
+            font-weight: bold;
+        }
+        &__sub {
+            font-size: 48px;
+            padding-top: 20px;
+        }
+    }
     &__block {
         &-on {
             padding-top: 65px;
             padding-bottom: 80px;
             &__inner {
                 display: flex;
+            }
+            &__logo {
+                padding-right: 60vw;
             }
         }
         &-tw {
@@ -31,6 +49,119 @@ body {
                     max-width: 50%;
                     width: 100%;
                     padding: 0 30px;
+                }
+            }
+        }
+        &-th {
+            margin-bottom: 100px;
+        }
+        &-fo {
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                top: 7%;
+                right: 0;
+                background-image: url(../../img/bl4.png);
+                height: 100%;
+                width: 20vw;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            &__wrap {
+                position: relative;
+            }
+            &__part {
+                position: absolute;
+                top: 0;
+                height: 100%;
+                background-size: contain;
+                &.is--one {
+                    background-image: url(../../img/part1.png);
+                }
+                &.is--two {
+                    background-image: url(../../img/part2.png);
+                }
+            }
+            &__moc {
+                padding-top: 50px;
+                position: relative;
+                z-index: 10;
+                max-width: 1200px;
+                width: 100%;
+                margin: 0 auto 100px auto;
+                &:nth-child(3) {
+                    margin-bottom: 0 !important;
+                }
+            }
+        }
+        &-fi {
+            position: relative;
+            &__text {
+                position: absolute;
+                width: 100%;
+                padding-top: 100px;
+                text-align: center;
+                padding-left: 30px;
+                padding-right: 30px;
+                font-size: 50px;
+                color: #fff;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .__dd {
+        &__heading {
+            margin-bottom: 30px;
+            &__text {
+                font-size: 30px;
+            }
+            &__sub {
+                font-size: 22px;
+            }
+        }
+        &__bg1 {
+            background: inherit;
+        }
+        &__block {
+            &-on {
+                padding-top: 40px;
+                padding-bottom: 40px;
+                &__logo {
+                    padding: 0 70px;
+                    margin: 0 auto;
+                }
+            }
+            &-tw {
+                &__list {
+                    margin: 0;
+                    flex-wrap: wrap;
+                    &__block {
+                        padding-left: 0;
+                        padding-right: 0;
+                        max-width: 400px;
+                        width: 100%;
+                        margin: 0 auto;
+                        &:first-child {
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+            }
+            &-th {
+                margin-bottom: 0;
+            }
+            &-fo {
+                &__moc {
+                    margin-bottom: 0;
+                }
+            }
+            &-fi {
+                &__text {
+                    padding-top: 20px;
+                    font-size: 24px;
                 }
             }
         }
